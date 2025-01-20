@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1=parseInt(prompt("Enter the first number"));
+        let num2=parseInt(prompt("Enter the second number"));
+        let choice=parseInt(prompt("Enter your choice."));
+        function add(a,b){
+            return a+b;
+        }
+        function subtract(a,b){
+            return a-b;
+        }
+        function multiply(a,b){
+            return a*b;
+        }
+        function divide(a,b){
+            return a/b;
+        }
+        switch(choice){
+            case 1:
+                var result=add(num1,num2);
+            break; 
+            case 2:
+                var result=subtract(num1,num2);
+            break; 
+            case 3:
+                var result=multiply(num1,num2);
+            break; 
+            case 4:
+                var result=divide(num1,num2);
+            break;
+            default:
+                document.write("Error");
+        }
+// console.log(result);
+document.write(result);
+    </script>
+</body>
+</html>
