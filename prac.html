@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#box").hide();
+            })
+            $("#box").hide();
+            $("#show").click(function(){
+                $("#box").show();
+            })
+        });
+    </script>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+ <div id="box"></div>   
+</body>
+</html>
