@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+header {
+  background-color: red;
+  height: 5vh;
+}
+nav {
+  background-color: pink;
+  height: 5vh;
+}
+main {
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+}
+#first {
+  background-color: rgb(190, 187, 187);
+}
+#second {
+  background-color: rgb(123, 211, 123);
+}
+#third {
+  background-color: rgb(80, 80, 218);
+}
+footer {
+  background-color: gray;
+  height: 5vh;
+}
