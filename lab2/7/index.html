@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Validate</title>
+    <style>
+      #emailerror{
+       color:red;
+       font-size:12px; 
+      }
+    </style>
+
+  </head>
+  <body>
+    <form onsubmit="emailvalidate(event);">     
+      <label for="email">Email </label><br>
+        <input type="text" id="email"><br>
+        <div id="emailerror"></div>
+        <button type="submit">Validate</button>
+    </form>
+    <script>
+      function emailvalidate(event){
+        event.preventDefault();
+        const email=document.getElementById("email").value;
+        const emailtest=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!email||!emailtest.test(email)){
+              document.getElementById("emailerror").innerHTML="Please enter a valid Email";
+              return;
+            }
+            else{
+              document.querySelector("body").innerText="Validated";
+            }
+      }
+    </script>
+  </body>
+</html>
+
