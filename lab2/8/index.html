@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Cookies</title>
+  </head>
+  <body>
+    <h2>Cookie using JavaScript</h2>
+    <button onclick="setCookie();">Set Cookie</button>
+    <button onclick="getCookie();">Get Cookie</button>
+    <button onclick="deleteCookie();">Delete Cookie</button>
+    <p id="output"></p>
+    <script>
+      function setCookie(){
+        document.cookie="username=Sanisha; expires=Tue, 06 May 2025 23:59:59 GMT; path=/ ";
+        document.getElementById("output").innerText= "Cookie set: username=Sanisha";
+      }
+      function getCookie(){
+        let name = "username";
+        let cookies = document.cookie.split("; ");
+        for(let cookie of cookies){
+          let [key, value]=cookie.split("=");
+          if(key===name){
+            document.getElementById("output").innerText="Cookie value: "+value;
+            return;
+          }
+        }
+        document.getElementById("output").innerText="Cookie not found";
+      }
+      function deleteCookie(){
+        document.cookie="username=; expires= Mon, 05 May 2025 00:00:00  GMT; path=/";
+        document.getElementById("output").innerText="Cookie deleted";
+      }
+    </script>
+  </body>
+</html>
