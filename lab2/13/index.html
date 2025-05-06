@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Image Slider</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #slider {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div id="slider">
+  <div class="slide"><img src="hill.avif" alt="Image 1"></div>
+  <div class="slide"><img src="mountain.avif" alt="Image 2"></div>
+  <div class="slide"><img src="wildlife.avif" alt="Image 3"></div>
+  <div class="slide"><img src="fog.avif" alt="Image 4"></div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    let current = 0;
+    const slides = $('.slide');
+    const total = slides.length;
+
+    function showSlide(index) {
+      slides.fadeOut(500);
+      slides.eq(index).fadeIn(500);
+    }
+
+    function nextSlide() {
+      current = (current + 1) % total;
+      showSlide(current);
+    }
+
+    showSlide(current); // Show the first slide
+    setInterval(nextSlide, 2000); // Change every 3 seconds
+  });
+</script>
+
+</body>
+</html>
