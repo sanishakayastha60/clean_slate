@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <form>
+    <label for="genre">Genre</label>
+    <select name="genre" id="genre">
+      <option value="romance">Romance</option>
+      <option value="horror">Horror</option>
+      <option value="psychological">Psychological</option>
+      <option value="Sci-Fi">Sci-Fi</option>
+      <option value="fantasy">Fantasy</option>
+    </select><br>
+    <button type="submit" id="show">Submit</button>
+    <p id="result"></p>
+  </form>
+  <script>
+    $(document).ready(function(){
+      $("#show").click(function(e){
+        e.preventDefault();
+        var selectedValue=$('#genre option:selected').val();
+        $('#result').text('Selected value: '+selectedValue);
+      });
+    });
+  </script>
+</body>
+</html>
