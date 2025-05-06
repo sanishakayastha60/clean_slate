@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX load </title>
+    <style>
+      #container{
+        background:purple;
+        width:150px;
+        height:150px;
+        position:relative;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <div id="container"></div>
+    <button>Click Here</button>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          $("#container").animate({
+            width: '200px',
+            height: '200px',
+            opacity: '0.5'
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
